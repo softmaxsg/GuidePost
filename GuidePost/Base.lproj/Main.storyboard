@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j6M-0T-RPb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+    </dependencies>
+    <scenes>
+        <!--Main ViewController-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" userLabel="Main ViewController" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPR-Qd-pzD">
+                                <rect key="frame" x="250" y="253" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="MUl-CC-bDk"/>
+                                    <constraint firstAttribute="height" constant="30" id="pLi-KN-86b"/>
+                                </constraints>
+                                <state key="normal" title="Add a card">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JlM-dl-Scl" kind="presentation" id="qJ9-tw-Bsa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="GPR-Qd-pzD" secondAttribute="centerY" id="VoJ-E9-xFi"/>
+                            <constraint firstAttribute="centerX" secondItem="GPR-Qd-pzD" secondAttribute="centerX" id="fxl-IX-4gS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="GUIDEPOST" id="DaZ-ef-FBH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="136"/>
+        </scene>
+        <!--EditCard ViewController-->
+        <scene sceneID="dte-jr-Onv">
+            <objects>
+                <viewController id="shG-K4-dfM" userLabel="EditCard ViewController" customClass="EditCardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tdo-bW-1RK"/>
+                        <viewControllerLayoutGuide type="bottom" id="N1v-ya-LRk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6h3-lL-uom">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pig-Dz-uVm" userLabel="Link View">
+                                <rect key="frame" x="16" y="20" width="568" height="49"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-Link" translatesAutoresizingMaskIntoConstraints="NO" id="5iQ-Yh-LZm" userLabel="Link Icon">
+                                        <rect key="frame" x="8" y="8" width="33" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="33" id="faC-0I-l7L"/>
+                                            <constraint firstAttribute="height" constant="33" id="vff-Sr-FEI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJE-Ss-1Ot" userLabel="Link TextView" customClass="UITextViewEx">
+                                        <rect key="frame" x="49" y="8" width="519" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="QTS-Pe-8ha"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="66" id="fbu-1E-HNz"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Add card link..."/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hidePlaceholderOnEditing" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5iQ-Yh-LZm" firstAttribute="leading" secondItem="pig-Dz-uVm" secondAttribute="leading" constant="8" id="8Z6-fP-1LX"/>
+                                    <constraint firstAttribute="trailing" secondItem="UJE-Ss-1Ot" secondAttribute="trailing" id="VLq-xr-dLl"/>
+                                    <constraint firstItem="UJE-Ss-1Ot" firstAttribute="leading" secondItem="5iQ-Yh-LZm" secondAttribute="trailing" constant="8" id="drB-Zf-2jL"/>
+                                    <constraint firstItem="5iQ-Yh-LZm" firstAttribute="top" secondItem="pig-Dz-uVm" secondAttribute="top" constant="8" id="kXW-V2-Bgu"/>
+                                    <constraint firstAttribute="bottom" secondItem="UJE-Ss-1Ot" secondAttribute="bottom" constant="8" id="nV7-KO-vWs"/>
+                                    <constraint firstItem="UJE-Ss-1Ot" firstAttribute="top" secondItem="pig-Dz-uVm" secondAttribute="top" constant="8" id="zl6-EC-OeN"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfi-GQ-B2Z">
+                                <rect key="frame" x="16" y="85" width="568" height="431"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeS-Z0-YNl" userLabel="Title TextView" customClass="UITextViewEx">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="qzg-11-q9X"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="66" id="yNj-ws-iS7"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Add Title..."/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hidePlaceholderOnEditing" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Chz-qo-1mp">
+                                        <rect key="frame" x="0.0" y="49" width="84" height="84"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="GaF-PR-bBc"/>
+                                            <constraint firstAttribute="width" constant="84" id="hQA-pr-7JF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBE-On-5A5" userLabel="Add Image Button">
+                                        <rect key="frame" x="0.0" y="49" width="84" height="84"/>
+                                        <state key="normal" image="Icon-Camera">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="Highlighted-Button-Background"/>
+                                        <connections>
+                                            <action selector="addCardImageButtonTapped" destination="shG-K4-dfM" eventType="touchUpInside" id="BWk-Ik-zE3"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC8-CX-8m2" userLabel="Description TextView" customClass="UITextViewEx">
+                                        <rect key="frame" x="100" y="49" width="468" height="84"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="9XF-eq-Fbm"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="84" id="JgB-ZB-hhG"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="168" id="Vau-Zd-NK4"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Add Description..."/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hidePlaceholderOnEditing" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJc-MH-cjp" userLabel="Commit Button">
+                                        <rect key="frame" x="254" y="371" width="60" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="FSo-4H-MGb"/>
+                                            <constraint firstAttribute="width" constant="60" id="gLF-Es-yFl"/>
+                                        </constraints>
+                                        <state key="normal" image="Icon-Commit">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="commitCardButtonTapped" destination="shG-K4-dfM" eventType="touchUpInside" id="yUE-Sn-qlX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="CJc-MH-cjp" secondAttribute="centerX" id="79M-Fw-VmB"/>
+                                    <constraint firstAttribute="trailing" secondItem="HeS-Z0-YNl" secondAttribute="trailing" id="8Re-01-uZr"/>
+                                    <constraint firstItem="Chz-qo-1mp" firstAttribute="top" secondItem="HeS-Z0-YNl" secondAttribute="bottom" constant="16" id="F0K-rx-j25"/>
+                                    <constraint firstAttribute="bottom" secondItem="CJc-MH-cjp" secondAttribute="bottom" id="Guy-Dk-vJ0"/>
+                                    <constraint firstItem="Chz-qo-1mp" firstAttribute="leading" secondItem="xfi-GQ-B2Z" secondAttribute="leading" id="LJj-gn-0pW"/>
+                                    <constraint firstItem="QC8-CX-8m2" firstAttribute="top" secondItem="HeS-Z0-YNl" secondAttribute="bottom" constant="16" id="NaB-jw-eb8"/>
+                                    <constraint firstItem="Chz-qo-1mp" firstAttribute="leading" secondItem="ZBE-On-5A5" secondAttribute="leading" id="Pwk-uY-DvL"/>
+                                    <constraint firstItem="Chz-qo-1mp" firstAttribute="height" secondItem="ZBE-On-5A5" secondAttribute="height" id="SrH-Ww-NXP"/>
+                                    <constraint firstItem="Chz-qo-1mp" firstAttribute="top" secondItem="ZBE-On-5A5" secondAttribute="top" id="Tyj-cu-MIH"/>
+                                    <constraint firstItem="Chz-qo-1mp" firstAttribute="width" secondItem="ZBE-On-5A5" secondAttribute="width" id="gXa-zC-7rH"/>
+                                    <constraint firstItem="QC8-CX-8m2" firstAttribute="leading" secondItem="Chz-qo-1mp" secondAttribute="trailing" constant="16" id="jqh-40-fA2"/>
+                                    <constraint firstAttribute="trailing" secondItem="QC8-CX-8m2" secondAttribute="trailing" id="ln8-mC-MtY"/>
+                                    <constraint firstItem="HeS-Z0-YNl" firstAttribute="top" secondItem="xfi-GQ-B2Z" secondAttribute="top" id="wLl-Np-uoR"/>
+                                    <constraint firstItem="HeS-Z0-YNl" firstAttribute="leading" secondItem="xfi-GQ-B2Z" secondAttribute="leading" id="xNs-or-hJR"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsQ-td-shU" userLabel="Retrieve Info Button">
+                                <rect key="frame" x="270" y="89" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="9pq-Pm-uTk"/>
+                                    <constraint firstAttribute="height" constant="60" id="a0P-mW-VRf"/>
+                                </constraints>
+                                <state key="normal" image="Icon-Retrieve">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="activityIndicatorStyleNumber">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="retrieveInfoButtonTapped" destination="shG-K4-dfM" eventType="touchUpInside" id="9CE-Rq-ori"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pig-Dz-uVm" secondAttribute="trailing" constant="16" id="1hr-iu-Bme"/>
+                            <constraint firstItem="NsQ-td-shU" firstAttribute="top" secondItem="pig-Dz-uVm" secondAttribute="bottom" constant="20" id="G4m-vf-5bC"/>
+                            <constraint firstItem="xfi-GQ-B2Z" firstAttribute="top" secondItem="pig-Dz-uVm" secondAttribute="bottom" constant="16" id="KQz-eG-2lu"/>
+                            <constraint firstItem="pig-Dz-uVm" firstAttribute="leading" secondItem="6h3-lL-uom" secondAttribute="leading" constant="16" id="VB4-Kx-PtJ"/>
+                            <constraint firstItem="xfi-GQ-B2Z" firstAttribute="leading" secondItem="6h3-lL-uom" secondAttribute="leading" constant="16" id="aFY-Hc-nzT"/>
+                            <constraint firstItem="pig-Dz-uVm" firstAttribute="top" secondItem="tdo-bW-1RK" secondAttribute="bottom" constant="20" id="hDR-Vz-o6v"/>
+                            <constraint firstItem="N1v-ya-LRk" firstAttribute="top" secondItem="xfi-GQ-B2Z" secondAttribute="bottom" constant="20" id="kKX-hJ-wfH"/>
+                            <constraint firstAttribute="centerX" secondItem="NsQ-td-shU" secondAttribute="centerX" id="kSN-yK-9aU"/>
+                            <constraint firstAttribute="trailing" secondItem="xfi-GQ-B2Z" secondAttribute="trailing" constant="16" id="qur-zJ-LTV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="GUIDEPOST" id="ZhG-Sg-pGx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="gX1-7l-efb">
+                            <connections>
+                                <segue destination="7L7-Wa-Pbd" kind="unwind" identifier="unwindSegue" unwindAction="closeModalSegue:" id="RcK-6k-ZK2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cardContentView" destination="xfi-GQ-B2Z" id="n6L-DI-vhI"/>
+                        <outlet property="cardDescriptionTextView" destination="QC8-CX-8m2" id="RqP-Bn-AeA"/>
+                        <outlet property="cardImageView" destination="Chz-qo-1mp" id="PiR-Hy-WTt"/>
+                        <outlet property="cardTitleTextView" destination="HeS-Z0-YNl" id="hRc-nV-JI9"/>
+                        <outlet property="cardUrlTextView" destination="UJE-Ss-1Ot" id="Rja-j2-699"/>
+                        <outlet property="commitCardButton" destination="CJc-MH-cjp" id="ehm-Pu-WHL"/>
+                        <outlet property="retrieveInfoButton" destination="NsQ-td-shU" id="Tpa-ys-teS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8f-ix-EEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7L7-Wa-Pbd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1730" y="508"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qEa-RT-AZ5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JlM-dl-Scl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="qDm-cF-zwO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="shG-K4-dfM" kind="relationship" relationship="rootViewController" id="4sI-cs-Esw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gnp-eu-y8r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1730" y="-199"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2la-y5-lLK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j6M-0T-RPb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hgY-nq-8Bx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="EMp-mo-xPz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQk-Ox-2pW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="213" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Highlighted-Button-Background" width="84" height="84"/>
+        <image name="Icon-Camera" width="32" height="32"/>
+        <image name="Icon-Commit" width="22" height="22"/>
+        <image name="Icon-Link" width="30" height="30"/>
+        <image name="Icon-Retrieve" width="22" height="22"/>
+    </resources>
+</document>
